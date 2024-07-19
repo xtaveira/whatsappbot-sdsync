@@ -16,7 +16,7 @@ export class WhatsAppService implements OnModuleInit {
     console.log(`
       qr informations::
 
-      ${this.client.getQrCode()}
+      ${JSON.stringify(await this.client.getQrCode())}
       `)
 
     this.client.onMessage((message: Message) => {
