@@ -1,2 +1,3 @@
-2024/07/19-15:32:04.473 3c8 Creating DB C:\Users\davi\Documents\GitHub\whatsappbot-sdsync\tokens\main\Default\Session Storage since it was missing.
-2024/07/19-15:32:04.479 3c8 Reusing MANIFEST C:\Users\davi\Documents\GitHub\whatsappbot-sdsync\tokens\main\Default\Session Storage/MANIFEST-000001
+2024/07/19-16:23:07.305 26cc Reusing MANIFEST C:\Users\davi\Documents\GitHub\whatsappbot-sdsync\tokens\main\Default\Session Storage/MANIFEST-000001
+2024/07/19-16:23:07.305 26cc Recovering log #3
+2024/07/19-16:23:07.305 26cc Reusing old log C:\Users\davi\Documents\GitHub\whatsappbot-sdsync\tokens\main\Default\Session Storage/000003.log 
