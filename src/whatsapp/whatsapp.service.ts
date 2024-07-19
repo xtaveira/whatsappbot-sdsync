@@ -6,9 +6,18 @@ export class WhatsAppService implements OnModuleInit {
   private client: Whatsapp;
 
   async onModuleInit() {
+
     this.client = await create({
-      session:'main'
+      session: 'main'
     });
+
+    
+
+    console.log(`
+      qr informations::
+
+      ${this.client.getQrCode()}
+      `)
 
     this.client.onMessage((message: Message) => {
       const messageReceived = `
