@@ -8,7 +8,7 @@ export class WhatsAppService implements OnModuleInit {
   async onModuleInit() {
 
     this.client = await create({
-      session: 'main'
+      session: 'maain'
     });
 
     
