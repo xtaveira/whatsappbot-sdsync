@@ -5,11 +5,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Install Chromium and curl
-RUN apt-get update && \
-    apt-get install -y chromium curl && \
-    rm -rf /var/lib/apt/lists/*
-
 # Copy the rest of the application
 COPY . .
 
