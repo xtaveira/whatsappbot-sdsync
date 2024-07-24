@@ -6,6 +6,6 @@ export class AppController {
 
   @Get('/')
   async getMessage(){
-    return 'Hello World!'
+    return 'Hello Wworld!'
   }
 }
