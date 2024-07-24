@@ -11,8 +11,6 @@ export class WhatsAppService implements OnModuleInit {
       'session', 
       (base64Qrimg, asciiQR, attempts, urlCode) => {
         console.log('Number of attempts to read the qrcode: ', attempts);
-        console.log('Terminal qrcode: ', asciiQR);
-        console.log('base64 image string qrcode: ', base64Qrimg);
         console.log('urlCode (data-ref): ', urlCode);
         this.qrCode = base64Qrimg;
       },
@@ -21,18 +19,10 @@ export class WhatsAppService implements OnModuleInit {
         console.log('Session name: ', session);
       },
       {
-        headless: 'new',
-        disableSpins: true,
-        disableWelcome: true,
         autoClose: 0,
         logQR: false,
       }
     );
-
-    console.log(`
-      qr informations::
-      ${JSON.stringify(await this.client.getQrCode())}
-    `);
 
     this.client.onMessage((message: Message) => {
       console.log(`
