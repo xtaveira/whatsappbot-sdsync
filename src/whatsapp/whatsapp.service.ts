@@ -4,13 +4,15 @@ import { create, Whatsapp, Message } from 'venom-bot';
 @Injectable()
 export class WhatsAppService implements OnModuleInit {
   private client: Whatsapp;
+  private qrCode: string;
 
   async onModuleInit() {
 
-    this.client = await create({
-      session: 'maain'
+    this.client = await create('session-name', undefined, (base64Qrimg, asciiQR, attempts) => {
+      console.log('Number of attempts to read the qrcode: ', attempts);
+      console.log('Terminal qrcode: ', asciiQR);
+      this.qrCode = base64Qrimg;
     });
-
     
 
     console.log(`
@@ -29,7 +31,12 @@ export class WhatsAppService implements OnModuleInit {
       `
       console.log(messageReceived);
     });
+
   }
+
+    getQRCode(): string {
+      return this.qrCode
+    }
 
   async sendMessage(to: string, message: string): Promise<void> {
     await this.client.sendText(to, message);
