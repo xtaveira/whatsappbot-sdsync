@@ -46,7 +46,8 @@ To send a message, make a `POST` request to the `/whatsapp/send` endpoint with t
    \```json
    {
      "to": "1234567890",
-     "message": "Hello, this is a test message!"
+     "message":
+     "Hello, this is a test message!"
    }
    \```
 
